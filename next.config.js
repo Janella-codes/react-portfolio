@@ -1,4 +1,23 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
 
-module.exports = nextConfig
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'unsplash.com',
+        },
+        {
+            protocol: "https",
+            hostname: "pixabay.com",
+          },
+        {
+            protocol: "http",
+            hostname: "localhost",
+          },
+      ],
+    },
+  }
+
+
+  module.exports = nextConfig
