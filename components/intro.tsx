@@ -1,8 +1,7 @@
 "use client";
 
-
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import profilePic from '../images/IMG_2.jpg'
 import { motion } from 'framer-motion'
 import Link from 'next/link';
@@ -10,9 +9,19 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { FaGithubSquare } from 'react-icons/fa';
 
+import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/context/active-section-context';
+
 export default function Intro() {
+ const { ref } = useSectionInView('Home', 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
   return (
-    <section id='home' className='scroll-mt-28 mb-28 max-w-[50rem] text-center sm:mb-0'>
+    <section
+        ref={ref}
+       id='home' 
+       className='scroll-mt-28 mb-28 max-w-[50rem] text-center sm:mb-0'
+       >
         <div className='flex items-center justify-center'>
             <div className='relative'>
                 <motion.div
@@ -71,6 +80,10 @@ export default function Intro() {
         className='group bg-gray-900 text-white px-7 
         py-3 flex items-center gap-2 rounded-full outline-none
         focus:scale-110 hover:scale-110 hover:bg-gray-950 transition'
+        onClick={() => {
+          setActiveSection('Contact');
+          setTimeOfLastClick(Date.now());
+        }}
         >
             Contact me here <BsArrowRight 
             className='opacity-70 group-hover:translate-x-1 transition' />
@@ -81,8 +94,7 @@ export default function Intro() {
         items-center gap-2 rounded-full 
         outline-none focus:scale-110 
         hover:scale-110 active:scale-105
-        transition cursor-pointer border 
-        border-black/10'
+        transition cursor-pointer borderBlack dark:bg-white/10'
         href='/resume.pdf'
         download
         >
@@ -96,7 +108,7 @@ export default function Intro() {
             focus:scale-[1.15] 
             hover:scale-[1.15] hover:text-gray-950 active:scale-105
             transition cursor-pointer border 
-           border-black/10'
+           border-black/10 dark:bg-white/10 dark:text-white/60 dark:hover:text-gray-300'
             href='https://www.linkedin.com/in/janelle-vos-b31174181/'
         >
           <BsLinkedin/>
@@ -108,7 +120,7 @@ export default function Intro() {
             focus:scale-[1.35rem]
             hover:scale-[1.15] hover:text-gray-950 active:scale-105
             transition cursor-pointer border 
-           border-black/10'
+           border-black/10 dark:bg-white/10 dark:text-white/60 dark:hover:text-gray-300'
             href='https://github.com/Janella-codes'
            >
             <FaGithubSquare/>
