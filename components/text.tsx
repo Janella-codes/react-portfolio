@@ -28,7 +28,7 @@ export default function Experience2() {
            
            <VerticalTimelineElement
           visible={true}
-    className="vertical-timeline-element--work"
+    className="file:scroll-mt-28 mb-28 sm:mb-40 vertical-timeline-element--work"
     
    
     contentStyle={{
