@@ -35,28 +35,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduated unofficial bootcamp",
+    location: "Roseville, CA",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I graduated after 6 months of studying various online tutorials. I learned HTML, CSS, JavaScript, React, Node.js, Express, SQL and Python.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2023",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "WiKi Tech Support website developer",
+    location: "Roseville, CA",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I worked as a front-end developer for 2 years Developed  various web pages for use by my tech support group using javascript, CSS, and HTML5. Used the SDLC method to achieve the best possible outcome.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2015 - Present",
   },
   {
     title: "Full-Stack Developer",
-    location: "Houston, TX",
+    location: "Roseville, CA",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities. Built various web pages for my own website using ajax, php, javascript, CSS, and HTML5.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2014 - present",
   },
 ] as const;
 
@@ -64,7 +64,7 @@ export const projectsData = [
   {
     title: "CorpComment",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+      "I worked as a full-stack developer on this project. Users can give public feedback to companies.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
     imageUrl: corpcommentImg,
   },

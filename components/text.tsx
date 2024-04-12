@@ -11,6 +11,8 @@ import { experiencesData } from '@/lib/data';
 import { useInView } from 'react-intersection-observer';
 import { useTheme } from '@/context/theme-context';
 
+
+
 export default function Experience2() {
   const { ref } = useSectionInView('Experience');
   const {theme} = useTheme();
@@ -35,7 +37,9 @@ export default function Experience2() {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 dateClassName="mr-4 text-red-500"
+              
                 contentStyle={{
+                
                   background: theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                   boxShadow: 'none',
                   border: '1px solid rgba(0, 0, 0, 0.05)',
